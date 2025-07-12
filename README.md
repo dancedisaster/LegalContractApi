@@ -57,7 +57,7 @@ dotnet ef database update
 ```bash
 Every time you have to add a new migration, run (Each time you need to add a new migration, use a naming convention such as V001, V002, and so on):
 	dotnet ef migrations add <MigrationName>
-```bash	
+```	
 
 ### Run the API
 
