@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LegalContractApi</name>
+    </assembly>
+    <members>
+        <member name="T:LegalContractApi.Controllers.ContractController">
+            <summary>
+            Contract
+            </summary>
+        </member>
+        <member name="M:LegalContractApi.Controllers.ContractController.GetAllContracts(System.Int32,System.Int32)">
+            <summary>
+            Retrieves all legal contracts with pagination support.
+            </summary>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LegalContractApi.Controllers.ContractController.GetContractById(System.Guid)">
+            <summary>
+            Retrieves a legal contract by its ID.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LegalContractApi.Controllers.ContractController.GetAllWithoutPaging">
+            <summary>
+            Retrieves all legal contracts without pagination.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LegalContractApi.Controllers.ContractController.CreateContract(LegalContractApi.DTOs.ContractCreateDto)">
+            <summary>
+            Creates a new legal contract.
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LegalContractApi.Controllers.ContractController.UpdateContract(System.Guid,LegalContractApi.DTOs.ContractUpdateDto)">
+            <summary>
+            Updates an existing legal contract by its ID.
+            </summary>
+            <param name="id"></param>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LegalContractApi.Controllers.ContractController.DeleteContract(System.Guid)">
+            <summary>
+            Deletes a legal contract by its ID.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LegalContractApi.Data.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{LegalContractApi.Data.AppDbContext})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:LegalContractApi.DTOs.ContractResponseDto.Id">
+            <summary>
+            Unique identifier for the contract.
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.DTOs.ContractResponseDto.AuthorName">
+            <summary>
+            AuthorName
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.DTOs.ContractResponseDto.Description">
+            <summary>
+            Description of the contract.
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.DTOs.ContractResponseDto.CreatedAt">
+            <summary>
+            Date when the contract was created.
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.DTOs.ContractResponseDto.UpdatedAt">
+            <summary>
+            Date when the contract was last updated.
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.DTOs.ContractUpdateDto.AuthorName">
+            <summary>
+            AuthorName
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.DTOs.ContractUpdateDto.Description">
+            <summary>
+            Description of the contract.
+            </summary>
+        </member>
+        <member name="T:LegalContractApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:LegalContractApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LegalContractApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LegalContractApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LegalContractApi.Models.LegalContract">
+            <summary>
+            Represents a legal contract entity.
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.Models.LegalContract.Id">
+            <summary>
+            A unique identifier
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.Models.LegalContract.AuthorName">
+            <summary>
+            The name of the author
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.Models.LegalContract.LegalEntityName">
+            <summary>
+            A legal entity name
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.Models.LegalContract.Description">
+            <summary>
+            A free-text field which is used to describe the legal entity
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.Models.LegalContract.CreatedAt">
+            <summary>
+            A free-text field which is used to describe the legal entity
+            </summary>
+        </member>
+        <member name="P:LegalContractApi.Models.LegalContract.UpdatedAt">
+            <summary>
+            The date when the legal entity was updated (if any)
+            </summary>
+        </member>
+        <member name="T:LegalContractApi.Repositories.IContractRepository">
+            <summary>
+            Interface for contract services that handle legal contracts.
+            </summary>
+        </member>
+        <member name="M:LegalContractApi.Repositories.IContractRepository.GetAllAsync">
+            <summary>
+            Get all legal contracts.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LegalContractApi.Repositories.IContractRepository.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Get a paginated list of legal contracts.
+            </summary>
+            <param name="pageNumber">Page Number</param>
+            <param name="pageSize">Page Size</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "aJPOyrkhXPcXtvr9jVvDpUrJlKDMswqWqGvo3fyuLhM=",
+  "Source": "LegalContractApi",
+  "BasePath": "_content/LegalContractApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
