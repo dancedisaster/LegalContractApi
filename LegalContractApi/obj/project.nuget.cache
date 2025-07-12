@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3abhd3p0vPs=",
+  "dgSpecHash": "3MXSe+g2sOk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Henrique Mendes\\source\\repos\\LegalContractApi\\LegalContractApi\\LegalContractApi.csproj",
+  "projectFilePath": "C:\\Projects\\LegalContractApi\\LegalContractApi\\LegalContractApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Henrique Mendes\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Henrique Mendes\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
