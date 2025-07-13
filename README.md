@@ -6,12 +6,12 @@ A web application for managing legal contracts, developed with .NET 8 on the bac
 
 ## 🧩 API Features
 
-* Create a legal contract (`POST /api/contracts`)
-* Get all contracts (`GET /api/contracts/all`)
-* Get all contracts (paginated version) (`GET /api/contracts?pageNumber={pageNumber}&pageSize={pageSize}`)
-* Get a contract by ID (`GET /api/contracts/{id}`)
-* Update a contract (`PUT /api/contracts/{id}`)
-* Delete a contract (`DELETE /api/contracts/{id}`)
+* Create a legal contract (`POST /api/contract`)
+* Get all contracts (`GET /api/contract/all`)
+* Get all contracts (paginated version) (`GET /api/contract?pageNumber={pageNumber}&pageSize={pageSize}`)
+* Get a contract by ID (`GET /api/contract/{id}`)
+* Update a contract (`PUT /api/contract/{id}`)
+* Delete a contract (`DELETE /api/contract/{id}`)
 
 Each contract contains:
 
