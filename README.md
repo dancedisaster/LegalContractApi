@@ -65,7 +65,7 @@ Every time you have to add a new migration, run (Each time you need to add a new
 dotnet run
 ```
 
-Access Swagger at: [https://localhost:5001/swagger](https://localhost:7041/swagger)
+Access Swagger at: [https://localhost:7041/swagger](https://localhost:7041/swagger)
 
 ---
 
