@@ -9,7 +9,7 @@
             Contract
             </summary>
         </member>
-        <member name="M:LegalContractApi.Controllers.ContractController.GetAllContracts(System.Int32,System.Int32)">
+        <member name="M:LegalContractApi.Controllers.ContractController.GetAllContractsPaginatedAsync(System.Int32,System.Int32)">
             <summary>
             Retrieves all legal contracts with pagination support.
             </summary>
@@ -57,6 +57,11 @@
             
             </summary>
             <param name="options"></param>
+        </member>
+        <member name="T:LegalContractApi.DTOs.ContractPaginatedResponseDto">
+            <summary>
+            Paginated Contract Response DTO
+            </summary>
         </member>
         <member name="P:LegalContractApi.DTOs.ContractResponseDto.Id">
             <summary>
@@ -151,12 +156,12 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:LegalContractApi.Repositories.IContractRepository.GetAll(System.Int32,System.Int32)">
+        <member name="M:LegalContractApi.Repositories.IContractRepository.GetAllAsync(System.Int32,System.Int32)">
             <summary>
-            Get a paginated list of legal contracts.
+            Paginated List of Contracts
             </summary>
-            <param name="pageNumber">Page Number</param>
-            <param name="pageSize">Page Size</param>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
             <returns></returns>
         </member>
     </members>

@@ -1,4 +1,5 @@
-﻿using LegalContractApi.Models;
+﻿using LegalContractApi.DTOs;
+using LegalContractApi.Models;
 
 namespace LegalContractApi.Repositories
 {
@@ -14,12 +15,12 @@ namespace LegalContractApi.Repositories
         Task<IEnumerable<LegalContract>> GetAllAsync();
 
         /// <summary>
-        /// Get a paginated list of legal contracts.
+        /// Paginated List of Contracts
         /// </summary>
-        /// <param name="pageNumber">Page Number</param>
-        /// <param name="pageSize">Page Size</param>
+        /// <param name="pageNumber"></param>
+        /// <param name="pageSize"></param>
         /// <returns></returns>
-        Task<IEnumerable<LegalContract>> GetAll(int pageNumber, int pageSize);
+        Task<(IEnumerable<LegalContract> Items, int TotalCount)> GetAllAsync(int pageNumber, int pageSize);
 
         Task<LegalContract?> GetByIdAsync(Guid id);
 

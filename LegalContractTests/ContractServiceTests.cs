@@ -144,7 +144,7 @@ namespace LegalContractTests
             // Assert
             Assert.NotNull(result);
             Assert.Equal(author, result.AuthorName);
-            Assert.Equal(legalEntity, result.LegalEntity);
+            Assert.Equal(legalEntity, result.LegalEntityName);
             Assert.Equal(description, result.Description);
         }
 
@@ -167,5 +167,27 @@ namespace LegalContractTests
             Assert.Null(result);
         }
 
+
+        [Fact]
+        public async Task GetAllAsync_ShouldReturnPaginatedContract()
+        {
+            //Arrange
+            var service = new ContractService(_repoMock.Object, _loggerMock.Object);
+            var contracts = new List<LegalContract>
+            {
+                new LegalContract { Id = Guid.NewGuid(), AuthorName = "Author 1", LegalEntityName = "Author 2" },
+                new LegalContract { Id = Guid.NewGuid(), AuthorName = "Author 2",LegalEntityName = "Entity2" }
+            };
+            _repoMock.Setup(r => r.GetAllAsync(1, 10)).ReturnsAsync((contracts, contracts.Count));
+
+            //Act
+            var result = await service.GetAllAsync(1, 10);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(2, result.Total);
+            Assert.Equal(2, result.Items.Count());
+            Assert.Equal("Author 1", result.Items.First().AuthorName);
+        }
     }
 }

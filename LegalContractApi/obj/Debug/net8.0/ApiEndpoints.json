@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "LegalContractApi.Controllers.ContractController",
-    "Method": "GetAllContracts",
+    "Method": "GetAllContractsPaginatedAsync",
     "RelativePath": "api/Contract",
     "HttpMethod": "GET",
     "IsController": true,
@@ -18,7 +18,17 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "LegalContractApi.DTOs.ContractPaginatedResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "LegalContractApi.Controllers.ContractController",

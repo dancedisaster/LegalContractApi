@@ -36,9 +36,9 @@ namespace LegalContractApi.Controllers
         /// <param name="pageSize"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetAllContracts(int pageNumber = 1, int pageSize = 10)
+        public async Task<ActionResult<ContractPaginatedResponseDto>> GetAllContractsPaginatedAsync(int pageNumber = 1, int pageSize = 10)
         {
-            var contracts = await _contractService.GetAll(pageNumber, pageSize);
+            var contracts = await _contractService.GetAllAsync(pageNumber, pageSize);
             return Ok(contracts);
         }
 

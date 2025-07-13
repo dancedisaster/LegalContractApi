@@ -34,11 +34,16 @@ namespace LegalContractApi.Services
             return contract == null ? null : MapToDto(contract);
         }
 
-        public async Task<IEnumerable<ContractResponseDto>> GetAll(int pageNumber, int pageSize)
+        public async Task<ContractPaginatedResponseDto> GetAllAsync(int pageNumber, int pageSize)
         {
             _logger.LogInformation("Retrieving all contracts with pagination: Page {PageNumber}, Size {PageSize}", pageNumber, pageSize);
-            var contracts = await _repository.GetAll(pageNumber, pageSize);
-            return contracts.Select(MapToDto);
+            var data = await _repository.GetAllAsync(pageNumber, pageSize);
+
+            return new ContractPaginatedResponseDto
+            {
+                Total = data.TotalCount,
+                Items = data.Items.Select(MapToDto)
+            };
         }
 
         //Crate a new contract
@@ -85,7 +90,7 @@ namespace LegalContractApi.Services
             }
 
             existing.AuthorName = dto.AuthorName;
-            existing.LegalEntityName = dto.LegalEntity;
+            existing.LegalEntityName = dto.LegalEntityName;
             existing.Description = dto.Description;
             existing.UpdatedAt = DateTime.UtcNow;
 
@@ -116,7 +121,7 @@ namespace LegalContractApi.Services
         {
             Id = contract.Id,
             AuthorName = contract.AuthorName,
-            LegalEntity = contract.LegalEntityName,
+            LegalEntityName = contract.LegalEntityName,
             Description = contract.Description,
             CreatedAt = contract.CreatedAt,
             UpdatedAt = contract.UpdatedAt

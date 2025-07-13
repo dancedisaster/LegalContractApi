@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LegalContractTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1253c404de887a01fbe2fcc0fab3a41ac6adc717")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0be2b886baf97fde4bfc5a20ac0ea759ea4d0f26")]
 [assembly: System.Reflection.AssemblyProductAttribute("LegalContractTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LegalContractTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

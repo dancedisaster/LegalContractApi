@@ -1,4 +1,5 @@
 ﻿using LegalContractApi.Data;
+using LegalContractApi.DTOs;
 using LegalContractApi.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,14 +23,22 @@ namespace LegalContractApi.Repositories
             return await _context.LegalContracts.AsNoTracking().ToListAsync();
         }
 
-        public async Task<IEnumerable<LegalContract>> GetAll(int pageNumber, int pageSize)
+        public async Task<(IEnumerable<LegalContract> Items, int TotalCount)> GetAllAsync(int pageNumber, int pageSize)
         {
             _logger.LogInformation("Fetching contracts with pagination: Page {PageNumber}, Size {PageSize}", pageNumber, pageSize);
-            return await _context.LegalContracts
+
+            var query = _context.LegalContracts.AsQueryable();
+
+            var totalCount = await query.CountAsync();
+
+            var items =  await query
+                .OrderBy(c => c.CreatedAt)
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .AsNoTracking()
                 .ToListAsync();
+
+            return (items, totalCount);
         }
 
         public async Task<LegalContract?> GetByIdAsync(Guid id)

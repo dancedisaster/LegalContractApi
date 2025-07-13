@@ -7,7 +7,7 @@
         /// AuthorName
         /// </summary>
         public string AuthorName { get; set; } = string.Empty;
-        public string LegalEntity { get; set; }
+        public string LegalEntityName { get; set; }
         /// <summary>
         /// Description of the contract.
         /// </summary>
